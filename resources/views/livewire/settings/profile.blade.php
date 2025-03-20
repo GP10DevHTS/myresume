@@ -27,6 +27,19 @@
                 @endif
             </div>
 
+            <flux:input wire:model="job_title" :label="__('Job Title')" type="text" required autofocus autocomplete="job_title" />
+            <flux:input wire:model="city" :label="__('City')" type="text" required autofocus autocomplete="city" />
+            <flux:input wire:model="phone_number" :label="__('Phone Number')" type="text" required autofocus autocomplete="phone_number" />
+            <flux:input wire:model="date_of_birth" :label="__('Date of Birth')" type="date" required autofocus autocomplete="date_of_birth" />
+
+
+            <flux:input wire:model="twitter" :label="__('Twitter')" type="text"  autofocus autocomplete="twitter" />
+            <flux:input wire:model="facebook" :label="__('Facebook')" type="text"  autofocus autocomplete="facebook" />
+            <flux:input wire:model="instagram" :label="__('Instagram')" type="text"  autofocus autocomplete="instagram" />
+            <flux:input wire:model="linkedin" :label="__('Linked In')" type="text"  autofocus autocomplete="linkedin" />
+            <flux:input wire:model="github" :label="__('GitHub')" type="text"  autofocus autocomplete="github" />
+
+
             <div class="flex items-center gap-4">
                 <div class="flex items-center justify-end">
                     <flux:button variant="primary" type="submit" class="w-full">{{ __('Save') }}</flux:button>
@@ -38,6 +51,6 @@
             </div>
         </form>
 
-        <livewire:settings.delete-user-form />
+        {{-- <livewire:settings.delete-user-form /> --}}
     </x-settings.layout>
 </section>

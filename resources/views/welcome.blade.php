@@ -51,7 +51,7 @@
 
             <h1><a href="{{ url('/') }}">{{ $user->name ?? 'Ahairwe Jordan' }}</a></h1>
             <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-            <h2>I'm a passionate <span>{{ $user->jon_title ?? 'IT Infrastructure Specialist' }}</span> from
+            <h2>I'm a passionate <span>{{ $user->job_title ?? 'IT Infrastructure Specialist' }}</span> from
                 {{ $user->city ?? 'Kampala' }}</h2>
 
             <nav id="navbar" class="navbar">
@@ -67,11 +67,9 @@
             </nav><!-- .navbar -->
 
             <div class="social-links">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                @include('partials.social-links')
             </div>
+
 
         </div>
     </header><!-- End Header -->
@@ -916,11 +914,7 @@
                         <i class="bx bx-share-alt"></i>
                         <h3>Social Profiles</h3>
                         <div class="social-links">
-                            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-                            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                            @include('partials.social-links')
                         </div>
                     </div>
                 </div>

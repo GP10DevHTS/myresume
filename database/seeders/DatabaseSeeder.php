@@ -28,6 +28,11 @@ class DatabaseSeeder extends Seeder
             'city' => 'Kampala, Uganda',
             'phone_number' => "+256 750 084912",
             'date_of_birth' => Carbon::parse("2000/5/31"),
+            'facebook' => "https://www.facebook.com/jordanholly962/",
+            'instagram' => "https://www.instagram.com/sdjholly_1/",
+            'twitter' => "https://x.com/SdjHolly",
+            'linkedin' => "https://www.linkedin.com/in/gp10dev/",
+            'github' => "https://github.com/GP10DevHTS",
         ]);
     }
 }
