@@ -1,12 +1,16 @@
 <?php
 
-use App\Livewire\Settings\Appearance;
-use App\Livewire\Settings\Password;
+use App\Models\User;
 use App\Livewire\Settings\Profile;
+use App\Livewire\Settings\Password;
+use App\Livewire\Settings\Appearance;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    
+    return view('welcome',[
+        'user' => User::first(),
+    ]);
 })->name('home');
 
 Route::view('dashboard', 'dashboard')

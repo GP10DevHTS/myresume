@@ -4,7 +4,10 @@ namespace Database\Seeders;
 
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,8 +19,15 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'name' => 'Ahairwe Jordan',
+            'email' => 'jordankatetegirwe@gmail.com',
+            'password' => Hash::make('password'),
+            'job_title' => "Software Engineer",
+            'freelance' => true,
+            'degree' => "Bachelor",
+            'city' => 'Kampala, Uganda',
+            'phone_number' => "+256 750 084912",
+            'date_of_birth' => Carbon::parse("2000/5/31"),
         ]);
     }
 }

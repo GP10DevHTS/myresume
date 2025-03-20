@@ -14,6 +14,8 @@ return [
     */
 
     'name' => env('APP_NAME', 'Laravel'),
+    'powered_by' => "AjjiTech Systems",
+    'powered_by_link' => "https://ajjitechsystems.net",
 
     /*
     |--------------------------------------------------------------------------

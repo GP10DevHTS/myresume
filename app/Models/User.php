@@ -22,6 +22,18 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'job_title',
+        'twitter',
+        'github',
+        'facebook',
+        'instagram',
+        'linkedin',
+        'skype',
+        'date_of_birth',
+        'phone_number',
+        'city',
+        'freelance',
+        'degree'
     ];
 
     /**
@@ -54,7 +66,7 @@ class User extends Authenticatable
     {
         return Str::of($this->name)
             ->explode(' ')
-            ->map(fn (string $name) => Str::of($name)->substr(0, 1))
+            ->map(fn(string $name) => Str::of($name)->substr(0, 1))
             ->implode('');
     }
 }
