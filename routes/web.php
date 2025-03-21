@@ -5,6 +5,7 @@ use App\Livewire\Settings\Profile;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Appearance;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WebsiteController;
 
 Route::get('/', function () {
     
@@ -12,6 +13,8 @@ Route::get('/', function () {
         'user' => User::first(),
     ]);
 })->name('home');
+
+Route::post('/contact-form', [WebsiteController::class, 'sendContactForm'])->name('contactform.submit');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
